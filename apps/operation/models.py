@@ -20,6 +20,9 @@ class UserAsk(models.Model):
         verbose_name = '用户产品咨询'
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.name
+
 
 class UserFavorite(models.Model):
     """
@@ -34,6 +37,9 @@ class UserFavorite(models.Model):
         db_table = 'user_favorite'
         verbose_name = '用户收藏'
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.user.username
 
 
 class UserMessage(models.Model):
@@ -50,6 +56,9 @@ class UserMessage(models.Model):
         verbose_name = '用户消息'
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.user
+
 
 class StockComments(models.Model):
     """
@@ -65,6 +74,9 @@ class StockComments(models.Model):
         verbose_name = '评论'
         verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.stock.stock_name
+
 
 class OptionalShares(models.Model):
     """
@@ -78,3 +90,6 @@ class OptionalShares(models.Model):
         db_table = 'optional_shares'
         verbose_name = '自选股'
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.stock.stock_name
