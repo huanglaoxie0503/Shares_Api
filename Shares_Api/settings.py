@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'Shares_Api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '49.235.42.19',
+        'HOST': '127.0.0.1',
         'USER': 'root',
         'PASSWORD': 'root0503',
         'NAME': 'shares',
