@@ -16,6 +16,7 @@ class UserAsk(models.Model):
     add_time = models.DateTimeField(verbose_name='添加时间', auto_now_add=True)
 
     class Meta:
+        db_table = 'user_ask'
         verbose_name = '用户产品咨询'
         verbose_name_plural = verbose_name
 
@@ -30,6 +31,7 @@ class UserFavorite(models.Model):
     add_time = models.DateTimeField(verbose_name='添加时间', auto_now_add=True)
 
     class Meta:
+        db_table = 'user_favorite'
         verbose_name = '用户收藏'
         verbose_name_plural = verbose_name
 
@@ -44,6 +46,7 @@ class UserMessage(models.Model):
     add_time = models.DateTimeField(verbose_name='添加时间', auto_now_add=True)
 
     class Meta:
+        db_table = 'user_message'
         verbose_name = '用户消息'
         verbose_name_plural = verbose_name
 
@@ -58,6 +61,7 @@ class StockComments(models.Model):
     add_time = models.DateTimeField(verbose_name='添加时间', auto_now_add=True)
 
     class Meta:
+        db_table = 'stock_comments'
         verbose_name = '股票评论'
         verbose_name_plural = verbose_name
 
@@ -71,5 +75,6 @@ class OptionalShares(models.Model):
     add_time = models.DateTimeField(verbose_name='添加时间', auto_now_add=True)
 
     class Meta:
+        db_table = 'optional_shares'
         verbose_name = '自选股'
         verbose_name_plural = verbose_name

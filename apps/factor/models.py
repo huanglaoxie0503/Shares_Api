@@ -9,8 +9,10 @@ class FactorInfo(models.Model):
     """
     factor_id = models.IntegerField(verbose_name='因子ID', default=0)
     factor_name = models.CharField(max_length=100, verbose_name='因子名称')
+    factor_desc = models.CharField(max_length=500, verbose_name='因子描述', default='')
 
     class Meta:
+        db_table = 'factor_info'
         verbose_name = '因子基本信息'
         verbose_name_plural = verbose_name
 

@@ -17,6 +17,7 @@ class UserProfile(AbstractUser):
                                       default='image/default.png')
 
     class Meta:
+        db_table = "user_info"
         verbose_name = '用户信息'
         verbose_name_plural = verbose_name
 
@@ -34,5 +35,6 @@ class EmailVerifyRecord(models.Model):
     send_time = models.DateTimeField(verbose_name='发送时间', auto_now_add=True)
 
     class Meta:
+        db_table = 'users_email_verify_record'
         verbose_name = '邮箱验证码'
         verbose_name_plural = verbose_name
