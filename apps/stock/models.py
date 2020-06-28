@@ -15,7 +15,7 @@ class StockInfo(models.Model):
 
     class Meta:
         db_table = 'stock_info'
-        verbose_name = '股票基本信息'
+        verbose_name = '股票'
         verbose_name_plural = verbose_name
 
     def __str__(self):

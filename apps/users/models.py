@@ -10,7 +10,7 @@ class UserProfile(AbstractUser):
     """
     nick_name = models.CharField(max_length=20, verbose_name="花名", default='')
     birthday = models.DateField(verbose_name='生日', null=True, blank=True)
-    gender = models.CharField(max_length=10, choices=(('male', '男'), ('female', '女')), default='male')
+    gender = models.CharField(max_length=10, verbose_name='性别', choices=(('male', '男'), ('female', '女')), default='male')
     address = models.CharField(max_length=200, verbose_name='家庭住址', default='')
     mobile = models.CharField(max_length=11, verbose_name='电话号码', null=True, blank=True)
     head_portrait = models.ImageField(max_length=100, verbose_name='头像', upload_to='image/%Y/%m',
@@ -31,10 +31,13 @@ class EmailVerifyRecord(models.Model):
     """
     code = models.CharField(max_length=20, verbose_name='验证码')
     email = models.EmailField(max_length=50, verbose_name='邮箱')
-    send_type = models.CharField(max_length=10, choices=(('register', '注册'), ('forget', '找回密码')))
+    send_type = models.CharField(max_length=10, verbose_name='验证码类型', choices=(('register', '注册'), ('forget', '找回密码')))
     send_time = models.DateTimeField(verbose_name='发送时间', auto_now_add=True)
 
     class Meta:
         db_table = 'users_email_verify_record'
         verbose_name = '邮箱验证码'
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return '{0}({1})'.format(self.code, self.email)

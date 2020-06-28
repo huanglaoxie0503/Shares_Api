@@ -13,7 +13,7 @@ class FactorInfo(models.Model):
 
     class Meta:
         db_table = 'factor_info'
-        verbose_name = '因子基本信息'
+        verbose_name = '因子'
         verbose_name_plural = verbose_name
 
     def __str__(self):

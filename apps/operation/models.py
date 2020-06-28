@@ -62,7 +62,7 @@ class StockComments(models.Model):
 
     class Meta:
         db_table = 'stock_comments'
-        verbose_name = '股票评论'
+        verbose_name = '评论'
         verbose_name_plural = verbose_name
 
 

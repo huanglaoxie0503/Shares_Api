@@ -19,5 +19,6 @@ from django.urls import path
 import xadmin
 
 urlpatterns = [
+    # path(r'admin/', admin.site.urls),
     path(r'xadmin/', xadmin.site.urls),
 ]
