@@ -1,5 +1,9 @@
+# Django #
 .vscode
 .idea
+image
+db.sqlite3
 **/__pycache__
 **/*.log
+**/*.jpg
 

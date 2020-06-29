@@ -13,6 +13,8 @@ class UserAskAdmin(object):
     search_fields = ['name', 'mobile', 'product_name']
     # 自定义过滤器字段
     list_filter = ['name', 'mobile', 'product_name', 'add_time']
+    # 自定义图标
+    model_icon = 'fa fa-address-book-o'
 
 
 class UserFavoriteAdmin(object):
