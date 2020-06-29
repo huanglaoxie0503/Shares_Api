@@ -51,6 +51,8 @@ class OptionalSharesAdmin(object):
     search_fields = ['user', 'stock']
     # 自定义过滤器字段
     list_filter = ['user', 'stock', 'add_time']
+    # 自定义外键搜索
+    relfield_style = 'fk_ajax'
 
 
 # 注册
