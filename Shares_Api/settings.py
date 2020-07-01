@@ -30,6 +30,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Application definition
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'xadmin',
+    'captcha',
     'crispy_forms',
     'reversion',
     'apps.users',
@@ -85,7 +89,7 @@ WSGI_APPLICATION = 'Shares_Api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
+        'HOST': '49.235.42.19',
         'USER': 'root',
         'PASSWORD': 'root0503',
         'NAME': 'shares',
@@ -128,9 +132,12 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # 配置Broker
 BROKER_URL = 'redis://127.0.0.1:6379/0'
 BROKER_TRANSPORT = 'redis'
 
-EMAIL_FROM = "projectsedu@sina.com"
+EMAIL_FROM = "2251018029@qq.com"
