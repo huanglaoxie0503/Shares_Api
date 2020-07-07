@@ -140,4 +140,13 @@ STATICFILES_DIRS = (
 BROKER_URL = 'redis://127.0.0.1:6379/0'
 BROKER_TRANSPORT = 'redis'
 
-EMAIL_FROM = "2251018029@qq.com"
+# 邮件发送配置
+EMAIL_HOST = 'smtp.qq.com'  # 如果是163换成stmp.163.com
+EMAIL_PORT = 465  # qq邮箱的端口
+EMAIL_HOST_USER = '1692717842@qq.com'  # qq邮箱账号
+EMAIL_HOST_PASSWORD = 'tzywtsvkhqjaechj'  # 密码不是qq邮箱密码，而是授权码
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_USE_SSL = True
+EMAIL_FROM = EMAIL_HOST_USER
+
+
